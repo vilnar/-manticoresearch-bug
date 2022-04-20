@@ -1,0 +1,25 @@
+version: '2.2'
+services:
+  # https://github.com/manticoresoftware/docker
+  manticore_test:
+    hostname: manticore_test
+    container_name: manticore_test
+    build:
+      context: ./manticore
+      dockerfile: Dockerfile
+    ports:
+      - 127.0.0.1:19306:9306
+      - 127.0.0.1:19308:9308
+    networks:
+      - manticore_replication_net
+    volumes:
+      - ./manticore/generate_data.php:/home/manticore/generate_data.php
+      - ./manticore/manticore.conf:/etc/manticoresearch/manticore.conf
+      - ./manticore/init.sh:/tmp/init.sh
+      - ./reload_index.sh:/home/manticore/reload_index.sh
+    tty: true
+    command: "bash /tmp/init.sh"
+
+networks:
+  manticore_replication_net:
+    driver: bridge
