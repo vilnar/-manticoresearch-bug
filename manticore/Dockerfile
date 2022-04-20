@@ -1,4 +1,4 @@
-FROM manticoresearch/manticore:4.0.2
+FROM manticoresearch/manticore:4.2.0
 
 RUN apt update && apt -y install sudo vim php-fpm php-mbstring
 

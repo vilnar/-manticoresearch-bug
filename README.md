@@ -1,4 +1,6 @@
-# Reproduce manticoresearch bug
+# Manticoresearch bug
+
+Reproduce [issue](https://github.com/manticoresoftware/manticoresearch/issues/739)
 
 ## Prepare environment
 Run
@@ -17,12 +19,12 @@ Run stress test and keep running
 bash sql_loop.sh
 ```
 
-Run script `reload_index.sh` in new terminal session and wait after a while the program freez
+Run script `reload_index.sh` in new terminal session and wait while then it will freez
 ```
 docker exec manticore_test bash -c "bash ~/reload_index.sh"
 ```
 
-After the program hangs, mysql connection does not work
+After the program freez, mysql connection does not work
 ```
 mysql --port 19306 --host 127.0.0.1
 ```
