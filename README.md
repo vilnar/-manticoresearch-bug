@@ -1,4 +1,4 @@
-# Manticoresearch bug
+# Manticoresearch bug 739
 
 Reproduce [issue](https://github.com/manticoresoftware/manticoresearch/issues/739)
 
