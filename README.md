@@ -1,4 +1,4 @@
-# Manticoresearch bug 739
+# Manticoresearch issue 739
 
 Reproduce [issue](https://github.com/manticoresoftware/manticoresearch/issues/739)
 
@@ -13,7 +13,7 @@ Wait until indexer data is generated, there should be a message in the logs: "Pr
 docker logs manticore_test
 ```
 
-## Reproduce bug
+## Reproduce
 Run stress test and keep running
 ```
 bash sql_loop.sh
