@@ -2,8 +2,8 @@ version: '2.2'
 services:
   # https://github.com/manticoresoftware/docker
   manticore_test:
-    hostname: manticore_test
-    container_name: manticore_test
+    hostname: manticore_issue_739
+    container_name: manticore_issue_739
     build:
       context: ./manticore
       dockerfile: Dockerfile
